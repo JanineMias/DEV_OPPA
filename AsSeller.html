@@ -1,0 +1,744 @@
+<section class="register-page" id = "sellerReg">
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f8ef2cd7f1e2003b35518305fd25ab811dc1fff8974deb26f205a4d052f740d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="OPPA Logo" class="logo-image" />
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-name">OPPA</h1>
+          <p class="brand-tagline">Developed by Pre Owned Pros</p>
+        </div>
+      </div>
+      <a href="#about" class="about-us-link">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/633289eceda4e88ed9eb7893373889d6b4106aca9f8787f52f3f3e8a07c803da?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="about-us-icon" />
+        <span>About us</span>
+      </a>
+    </header>
+  
+    <div class="auth-toggle" role="group" aria-label="Authentication options">
+      <a href="LogIn.html#logIn"><button class="login-btn">Login</button> </a>
+      <button class="register-btn">Register</button>
+    </div>
+  
+<main class="register-container">
+  <div class="register-content">
+    <div class="register-column">
+      <header class="register-header">
+        <div class="register-title">
+          <h1 class="register-heading">Register</h1>
+          <p class="register-subheading">Seller</p>
+        </div>
+        <div class="input-group">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6b0b035e072f10a49b1ba1c1eb1a1cbcdcfbb4b7c6d68303f31287e43f61b68?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="input-icon" />
+          <label for="firstName" class="input-label">First Name*</label>
+        </div>
+        <input type="text" id="firstName" class="input-field" placeholder="Enter First Name" required />
+      </header>
+    </div>
+    <div class="register-column-2">
+      <div class="last-name-group">
+        <label for="lastName" class="last-name-label">Last Name*</label>
+        <input type="text" id="lastName" class="last-name-input" placeholder="Enter Last Name" required />
+      </div>
+    </div>
+  </div>
+  <div class="username-group">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d42171e236eacf407ca2acc21330d07527151d04d0b88ae72892986351fdbd5?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="username-icon" />
+    <label for="username" class="username-label">Username*</label>
+  </div>
+  <input type="text" id="username" class="username-input" placeholder="Create Username" required />
+  <div class="email-group">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d042d32af1443afdb7e9318a24e81631f9c5d4480b1f1798e066d8783e2d8466?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="email-icon" />
+    <label for="email" class="email-label">E-mail*</label>
+  </div>
+  <input type="email" id="email" class="email-input" placeholder="Enter E-mail" required />
+  <div class="password-group">
+    <div class="password-label-group">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9d0dce7014a8f4a856e9ed55336913177cf130180a305f57701758d9e235b13?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="password-icon" />
+      <label for="password" class="password-label">Password*</label>
+    </div>
+    <label for="confirmPassword" class="confirm-password-label">Confirm Password*</label>
+  </div>
+  <div class="password-input-group">
+    <input type="password" id="password" class="password-input" placeholder="Create Password" required />
+    <div class="confirm-password-input-group">
+      <input type="password" id="confirmPassword" class="confirm-password-input" placeholder="Enter Password" required />
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f6f5d0bd92bb310a62e3cc977dad2e44b073f0d90f58028b9d64dd4bb02db01?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Toggle password visibility" class="password-toggle" tabindex="0" role="button" />
+    </div>
+  </div>
+  <a href="#" class="forgot-password">Forgot Password</a>
+  <button type="submit" class="confirm-button">Confirm</button>
+</main>
+  <footer class="footer">
+    <p>Copyright © 2024 Pre Owned Pros. All Rights Reserved.</p>
+  </footer>
+</section>
+
+<style>
+    .register-page {
+      background-color: #e5e9fb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .register-container {
+    border-radius: 20px;
+    background-color: #f2f3f7;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin-top: 42px;
+    width: 754px;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 27px 39px 27px 10px;
+    }
+
+    @media (max-width: 991px) {
+    .register-container {
+    padding: 27px 20px 27px 10px;
+    margin-top: 40px;
+        }
+    }                                            
+
+    .register-content {
+    display: flex;
+    gap: 20px;
+    }
+
+    @media (max-width: 991px) {
+    .register-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+        }
+    }
+
+
+
+
+    .header {
+      align-self: stretch;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .logo {
+      display: flex;
+      min-height: 55px;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-image {
+      aspect-ratio: 0.71;
+      object-fit: contain;
+      width: 29px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .brand-info {
+      display: flex;
+      margin-top: 10px;
+      flex-direction: column;
+      font-family: Inter, sans-serif;
+      line-height: 1.2;
+    }
+    
+    .brand-name {
+      color: #444e56;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1.44px;
+    }
+    
+    .brand-tagline {
+      color: rgba(68, 78, 86, 0.8);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.45px;
+      margin-top: 12px;
+    }
+    
+    .about-us-link {
+      display: flex;
+      gap: 5px;
+      color: #444e56;
+      letter-spacing: -0.6px;
+      margin: auto 0;
+      font: 600 20px/1.2 Inter, sans-serif;
+      text-decoration: none;
+    }
+    
+    .about-us-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 33px;
+    }
+    
+    .auth-toggle {
+      border-radius: 20px;
+      background-color: rgba(187, 188, 192, 0.4);
+      display: flex;
+      margin-top: 62px;
+      width: 249px;
+      max-width: 100%;
+      gap: 20px;
+      color: #444e56;
+      letter-spacing: 0.4px;
+      justify-content: space-between;
+      padding: 7px 7px 7px 35px;
+      font: 20px/1.2 Inter, sans-serif;
+      border: 1px solid rgba(117, 117, 117, 0.5);
+    }
+    
+    .login-btn {
+      font-weight: 400;
+      margin: auto 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .register-btn {
+      border-radius: 20px;
+      background-color: #f2f3f7;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      font-weight: 600;
+      padding: 8px 21px;
+      border: 1px solid rgba(117, 117, 117, 0.5);
+      cursor: pointer;
+    }
+    
+    .main-content {
+      text-align: center;
+      margin-top: 112px;
+    }
+    
+    .register-title {
+      color: #444e56;
+      letter-spacing: 1.44px;
+      font: 800 48px/1.2 Inter, sans-serif;
+      margin-bottom: 14px;
+    }
+    
+    .register-subtitle {
+      color: rgba(68, 78, 86, 0.7);
+      letter-spacing: -0.6px;
+      font: 600 20px/1.2 Inter, sans-serif;
+    }
+    
+    .role-selection {
+      margin-top: 60px;
+      width: 100%;
+      max-width: 1016px;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .role-card {
+      border-radius: 20px;
+      background-color: #f2f3f7;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: Inter, sans-serif;
+      line-height: 1.2;
+      padding: 42px 43px;
+      flex: 1;
+    }
+    
+    .role-header {
+      display: flex;
+      gap: 13px;
+      font-size: 36px;
+      color: #444e56;
+      font-weight: 800;
+      letter-spacing: 1.08px;
+    }
+    
+    .role-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 48px;
+    }
+    
+    .role-description {
+      color: rgba(68, 78, 86, 0.7);
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.6px;
+      margin-top: 17px;
+    }
+    
+    .next-btn {
+      border-radius: 15px;
+      background-color: #3e6ee3;
+      margin-top: 148px;
+      width: 360px;
+      max-width: 100%;
+      color: #f2f3f7;
+      letter-spacing: 0.96px;
+      padding: 29px 70px;
+      font: 600 32px/1.2 Inter, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .footer {
+      color: rgba(68, 78, 86, 0.8);
+      letter-spacing: -0.45px;
+      text-align: center;
+      margin-top: 103px;
+      font: 400 15px/1.2 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .register-page {
+        padding: 20px;
+      }
+    
+      .header {
+        max-width: 100%;
+      }
+    
+      .brand-name {
+        font-size: 40px;
+      }
+    
+      .auth-toggle {
+        padding-left: 20px;
+        margin-top: 40px;
+      }
+    
+      .register-btn {
+        padding: 8px 20px;
+      }
+    
+      .main-content {
+        margin-top: 40px;
+      }
+    
+      .register-title {
+        font-size: 40px;
+      }
+    
+      .role-selection {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+        margin-top: 40px;
+      }
+    
+      .role-card {
+        padding: 20px;
+      }
+    
+      .next-btn {
+        margin-top: 40px;
+        padding: 20px;
+      }
+    
+      .footer {
+        margin-top: 40px;
+      }
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    
+.register-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 55%;
+  margin-left: 0;
+}
+
+@media (max-width: 991px) {
+  .register-column {
+    width: 100%;
+  }
+}
+
+.register-header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  font-family: Inter, sans-serif;
+  line-height: 1.2;
+}
+
+@media (max-width: 991px) {
+  .register-header {
+    margin-top: 24px;
+  }
+}
+
+.register-title {
+  display: flex;
+  margin-left: 23px;
+  flex-direction: column;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .register-title {
+    margin-left: 10px;
+    white-space: initial;
+  }
+}
+
+.register-heading {
+  color: #444e56;
+  font-size: 48px;
+  letter-spacing: 1.44px;
+}
+
+@media (max-width: 991px) {
+  .register-heading {
+    font-size: 40px;
+  }
+}
+
+.register-subheading {
+  color: rgba(68, 78, 86, 0.7);
+  font-size: 24px;
+  letter-spacing: 0.72px;
+  align-self: start;
+  margin-top: 7px;
+}
+
+.input-group {
+  display: flex;
+  margin-top: 4px;
+  gap: 1px;
+  font-size: 20px;
+  color: #444e56;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+.input-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 48px;
+}
+
+.input-label {
+  align-self: end;
+  margin-top: 27px;
+  flex-basis: auto;
+}
+
+.input-field {
+  border-radius: 15px;
+  background-color: #f2f3f7;
+  align-self: end;
+  margin-top: 4px;
+  width: 352px;
+  max-width: 100%;
+  font-size: 20px;
+  color: rgba(68, 78, 86, 0.8);
+  font-weight: 400;
+  letter-spacing: -0.6px;
+  padding: 24px 20px;
+  border: 1px solid rgba(68, 78, 86, 0.7);
+}
+
+.register-column-2 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 45%;
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .register-column-2 {
+    width: 100%;
+  }
+}
+
+.last-name-group {
+  display: flex;
+  margin-top: 107px;
+  flex-grow: 1;
+  flex-direction: column;
+  letter-spacing: -0.6px;
+  font: 20px/1.2 Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .last-name-group {
+    margin-top: 40px;
+  }
+}
+
+.last-name-label {
+  color: #444e56;
+  font-weight: 600;
+  align-self: start;
+}
+
+.last-name-input {
+  border-radius: 15px;
+  background-color: #f2f3f7;
+  margin-top: 10px;
+  color: rgba(68, 78, 86, 0.8);
+  font-weight: 400;
+  padding: 24px 15px;
+  border: 1px solid rgba(68, 78, 86, 0.7);
+}
+
+@media (max-width: 991px) {
+  .last-name-input {
+    padding-right: 20px;
+  }
+}
+
+.username-group {
+  align-self: start;
+  display: flex;
+  gap: 7px;
+  color: #444e56;
+  white-space: nowrap;
+  letter-spacing: -0.6px;
+  margin: 15px 0 0 23px;
+  font: 600 20px/1.2 Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .username-group {
+    margin-left: 10px;
+    white-space: initial;
+  }
+}
+
+.username-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.username-label {
+  flex-basis: auto;
+  margin: auto 0;
+}
+
+.username-input {
+  border-radius: 15px;
+  background-color: #f2f3f7;
+  align-self: end;
+  margin-top: 7px;
+  width: 680px;
+  max-width: 100%;
+  color: rgba(68, 78, 86, 0.8);
+  letter-spacing: -0.6px;
+  padding: 24px 20px;
+  font: 400 20px/1.2 Inter, sans-serif;
+  border: 1px solid rgba(68, 78, 86, 0.7);
+}
+
+.email-group {
+  align-self: start;
+  display: flex;
+  gap: 6px;
+  color: #444e56;
+  white-space: nowrap;
+  letter-spacing: -0.6px;
+  margin: 24px 0 0 24px;
+  font: 600 20px/1.2 Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .email-group {
+    margin-left: 10px;
+    white-space: initial;
+  }
+}
+
+.email-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.email-label {
+  margin: auto 0;
+}
+
+.email-input {
+  border-radius: 15px;
+  background-color: #f2f3f7;
+  align-self: end;
+  margin-top: 7px;
+  width: 680px;
+  max-width: 100%;
+  color: rgba(68, 78, 86, 0.8);
+  letter-spacing: -0.6px;
+  padding: 24px 20px;
+  font: 400 20px/1.2 Inter, sans-serif;
+  border: 1px solid rgba(68, 78, 86, 0.7);
+}
+
+.password-group {
+  display: flex;
+  width: 529px;
+  max-width: 100%;
+  gap: 20px;
+  color: #444e56;
+  letter-spacing: -0.6px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 21px 0 0 26px;
+  font: 600 20px/1.2 Inter, sans-serif;
+}
+
+.password-label-group {
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .password-label-group {
+    white-space: initial;
+  }
+}
+
+.password-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.password-label,
+.confirm-password-label {
+  margin: auto 0;
+}
+
+.password-input-group {
+  align-self: end;
+  display: flex;
+  margin-top: 7px;
+  width: 680px;
+  max-width: 100%;
+  gap: 29px;
+  color: rgba(68, 78, 86, 0.8);
+  letter-spacing: -0.6px;
+  flex-wrap: wrap;
+  font: 400 20px/1.2 Inter, sans-serif;
+}
+
+.password-input {
+  border-radius: 15px;
+  background-color: #f2f3f7;
+  flex-grow: 1;
+  width: fit-content;
+  padding: 24px 20px;
+  border: 1px solid rgba(68, 78, 86, 0.7);
+}
+
+.confirm-password-input-group {
+  border-radius: 15px;
+  background-color: #f2f3f7;
+  display: flex;
+  gap: 40px 100px;
+  flex-grow: 1;
+  flex-basis: auto;
+  padding: 16px 19px;
+  border: 1px solid rgba(68, 78, 86, 0.7);
+}
+
+@media (max-width: 991px) {
+  .confirm-password-input-group {
+    padding-left: 20px;
+  }
+}
+
+.confirm-password-input {
+  margin: auto 0;
+}
+
+.password-toggle {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 31px;
+}
+
+.forgot-password {
+  color: #0a4ac2;
+  letter-spacing: -0.6px;
+  align-self: end;
+  margin-top: 10px;
+  font: 600 20px/1.2 Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .forgot-password {
+    margin-right: 7px;
+  }
+}
+
+.confirm-button {
+  border-radius: 15px;
+  background-color: #3e6ee3;
+  align-self: center;
+  margin-top: 21px;
+  width: 420px;
+  max-width: 100%;
+  color: #f2f3f7;
+  white-space: nowrap;
+  letter-spacing: 0.6px;
+  padding: 24px 70px;
+  font: 600 20px/1.2 Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .confirm-button {
+    white-space: initial;
+    padding: 24px 20px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+    </style>
