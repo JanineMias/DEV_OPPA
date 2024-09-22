@@ -1,0 +1,1012 @@
+<style>
+    .buyer-car-bidding {
+      background-color: #e5e9fb;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      background-color: #f2f3f7;
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      font-family: Inter, sans-serif;
+      line-height: 1.2;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 22px 34px 22px 80px;
+    }
+    
+    @media (max-width: 991px) {
+      .header {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+    
+    .page-title {
+      color: #2d3438;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 0.72px;
+    }
+    
+    .user-info {
+      align-self: start;
+      display: flex;
+      margin-top: 8px;
+      gap: 11px;
+      font-weight: 600;
+    }
+    
+    .user-details {
+      align-self: start;
+      display: flex;
+      margin-top: 6px;
+      flex-direction: column;
+    }
+    
+    .user-name {
+      color: #0a4ac2;
+      font-size: 20px;
+      letter-spacing: -0.6px;
+    }
+    
+    .user-role {
+      color: #444e56;
+      font-size: 13px;
+      letter-spacing: -0.39px;
+      align-self: end;
+    }
+    
+    .user-avatar {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 40px;
+    }
+    
+    .main-content {
+      z-index: 10;
+      margin-top: -91px;
+      width: 100%;
+      max-width: 1406px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-content {
+        max-width: 100%;
+      }
+    }
+    
+    .content-wrapper {
+      gap: 20px;
+      display: flex;
+    }
+    
+    @media (max-width: 991px) {
+      .content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+    
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 24%;
+      margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .sidebar {
+        width: 100%;
+      }
+    }
+    
+    .sidebar-content {
+      background-color: #f2f3f7;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      margin: 0 auto;
+      padding: 28px 0 18px;
+    }
+    
+    @media (max-width: 991px) {
+      .sidebar-content {
+        margin-top: 37px;
+      }
+    }
+    
+    .logo-wrapper {
+      display: flex;
+      margin-left: 41px;
+      width: 131px;
+      max-width: 100%;
+      gap: 9px;
+    }
+    
+    @media (max-width: 991px) {
+      .logo-wrapper {
+        margin-left: 10px;
+      }
+    }
+    
+    .logo-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-image {
+      aspect-ratio: 0.69;
+      object-fit: contain;
+      object-position: center;
+      width: 24px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .logo-text {
+      color: #444e56;
+      letter-spacing: -0.96px;
+      margin: auto 0;
+      font: 700 32px/1.2 Inter, sans-serif;
+    }
+    
+    .nav-item {
+      background-color: #f2f3f7;
+      display: flex;
+      gap: 12px;
+      color: #444e56;
+      white-space: nowrap;
+      letter-spacing: -0.6px;
+      padding: 24px 41px;
+      font: 600 20px/1.2 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .nav-item {
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .nav-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 20px;
+    }
+    
+    .nav-text {
+      flex-grow: 1;
+      width: 208px;
+      margin: auto 0;
+    }
+    
+    .nav-item-active {
+      background-color: rgba(229, 233, 251, 0.5);
+      color: #0a4ac2;
+    }
+    
+    .nav-item-logout {
+      margin-top: 447px;
+    }
+    
+    @media (max-width: 991px) {
+      .nav-item-logout {
+        margin-top: 40px;
+      }
+    }
+    
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 76%;
+      margin-left: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-section {
+        width: 100%;
+      }
+    }
+    
+    .bidding-section {
+      display: flex;
+      margin-top: 119px;
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+      .bidding-section {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    
+    .section-title {
+      color: rgba(68, 78, 86, 0.8);
+      letter-spacing: -1.08px;
+      align-self: start;
+      font: 700 36px/1.2 Inter, sans-serif;
+    }
+    
+    .bidding-cards {
+      margin-top: 26px;
+    }
+    
+    @media (max-width: 991px) {
+      .bidding-cards {
+        max-width: 100%;
+      }
+    }
+    
+    .card-row {
+      gap: 20px;
+      display: flex;
+    }
+    
+    @media (max-width: 991px) {
+      .card-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+    
+    .card-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 50%;
+      margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .card-column {
+        width: 100%;
+      }
+    }
+    
+    .card {
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      min-width: 203px;
+      min-height: 291px;
+      width: 100%;
+      flex-direction: column;
+      font-family: Inter, sans-serif;
+      justify-content: start;
+      margin: 0 auto;
+      padding: 24px 24px 8px;
+    }
+    
+    @media (max-width: 991px) {
+      .card {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    
+    .card-image {
+      aspect-ratio: 2.9;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      min-width: 135px;
+      min-height: 156px;
+    }
+    
+    @media (max-width: 991px) {
+      .card-image {
+        max-width: 100%;
+      }
+    }
+    
+    .card-body {
+      position: relative;
+      display: flex;
+      min-width: 135px;
+      margin-top: 13px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+    }
+    
+    @media (max-width: 991px) {
+      .card-body {
+        max-width: 100%;
+      }
+    }
+    
+    .card-title {
+      border-radius: 0;
+      z-index: 0;
+      display: flex;
+      width: 104px;
+      max-width: 100%;
+      padding-right: 12px;
+      flex-direction: column;
+      align-items: start;
+    }
+    
+    .car-name {
+      color: #1e1e1e;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.41px;
+    }
+    
+    .car-brand {
+      color: #444e56;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-top: 14px;
+    }
+    
+    .card-price {
+      border-radius: 5px;
+      position: absolute;
+      z-index: 0;
+      display: flex;
+      width: 104px;
+      max-width: 100%;
+      flex-direction: column;
+      font-weight: 700;
+      line-height: 1.2;
+      right: 0;
+      bottom: 1px;
+      height: 56px;
+      padding: 1px 6px 1px 0;
+    }
+    
+    .price-amount {
+      color: rgba(68, 78, 86, 0.9);
+      font-size: 15px;
+      letter-spacing: -0.45px;
+    }
+    
+    .price-label {
+      border-radius: 5px;
+      background-color: #3e6ee3;
+      align-self: start;
+      margin-top: 16px;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      padding: 9px 10px;
+    }
+    
+    .card-details {
+      display: flex;
+      margin-top: 13px;
+      width: 248px;
+      max-width: 100%;
+      padding-right: 44px;
+      gap: 19px;
+      font-size: 15px;
+      color: rgba(68, 78, 86, 0.7);
+      font-weight: 400;
+      white-space: nowrap;
+      letter-spacing: -0.45px;
+      line-height: 1.2;
+    }
+    
+    @media (max-width: 991px) {
+      .card-details {
+        padding-right: 20px;
+        white-space: initial;
+      }
+    }
+    
+    .detail-item {
+      display: flex;
+      gap: 6px;
+    }
+    
+    @media (max-width: 991px) {
+      .detail-item {
+        white-space: initial;
+      }
+    }
+    
+    .detail-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 20px;
+    }
+    
+    .detail-text {
+      margin: auto 0;
+    }
+    
+    .progress-bar {
+      border-radius: 10px;
+      background-color: #fff;
+      display: flex;
+      margin-top: 16px;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 80px;
+    }
+    
+    @media (max-width: 991px) {
+      .progress-bar {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+    
+    .progress-indicator {
+      border-radius: 10px;
+      background-color: #0a4ac2;
+      display: flex;
+      width: 373px;
+      max-width: 100%;
+      height: 13px;
+    }
+    
+    .available-cars-section {
+      color: rgba(68, 78, 86, 0.8);
+      letter-spacing: -1.08px;
+      align-self: start;
+      margin-top: 25px;
+      font: 700 36px/1.2 Inter, sans-serif;
+    }
+    
+    .filter-section {
+      display: flex;
+      margin-top: 16px;
+      width: 100%;
+      align-items: start;
+      gap: 20px;
+      letter-spacing: -0.45px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 15px/1.2 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .filter-section {
+        max-width: 100%;
+        margin-right: 4px;
+      }
+    }
+    
+    .filter-group {
+      display: flex;
+      align-items: start;
+      gap: 17px;
+      color: rgba(68, 78, 86, 0.7);
+    }
+    
+    .filter-item {
+      border-radius: 10px;
+      background-color: #f2f3f7;
+      display: flex;
+      gap: 10px;
+      padding: 5px 7px;
+    }
+    
+    .filter-text {
+      margin: auto 0;
+    }
+    
+    .filter-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 20px;
+    }
+    
+    .filter-separator {
+      aspect-ratio: 3.28;
+      object-fit: contain;
+      object-position: center;
+      width: 95px;
+      border-radius: 10px;
+      background-color: #f2f3f7;
+    }
+    
+    .filter-clear {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      color: #fff;
+      white-space: nowrap;
+      text-align: center;
+    }
+    
+    @media (max-width: 991px) {
+      .filter-clear {
+        white-space: initial;
+      }
+    }
+    
+    .clear-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 30px;
+    }
+    
+    .clear-text {
+      border-radius: 5px;
+      background-color: #3e6ee3;
+      padding: 9px 13px;
+    }
+    
+    @media (max-width: 991px) {
+      .clear-text {
+        white-space: initial;
+      }
+    }
+    
+    .search-bar {
+      border-radius: 10px;
+      background-color: #f2f3f7;
+      align-self: start;
+      display: flex;
+      margin-top: 20px;
+      gap: 9px;
+      color: rgba(68, 78, 86, 0.7);
+      white-space: nowrap;
+      letter-spacing: -0.45px;
+      flex-wrap: wrap;
+      padding: 5px 6px;
+      font: 400 15px/1.2 Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .search-bar {
+        white-space: initial;
+      }
+    }
+    
+    .search-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 20px;
+    }
+    
+    .search-text {
+      flex-basis: auto;
+      flex-grow: 1;
+      margin: auto 0;
+    }
+    
+    @media (max-width: 991px) {
+      .search-text {
+        max-width: 100%;
+      }
+    }
+    
+    .car-grid {
+      margin-top: 18px;
+    }
+    
+    @media (max-width: 991px) {
+      .car-grid {
+        max-width: 100%;
+      }
+    }
+    
+    .car-row {
+      gap: 20px;
+      display: flex;
+    }
+    
+    @media (max-width: 991px) {
+      .car-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+    
+    .car-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 33%;
+      margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .car-column {
+        width: 100%;
+      }
+    }
+    
+    .car-card {
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      min-width: 203px;
+      min-height: 312px;
+      width: 100%;
+      flex-direction: column;
+      font-family: Inter, sans-serif;
+      justify-content: start;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .car-card {
+        margin-top: 40px;
+      }
+    }
+    
+    .car-image {
+      aspect-ratio: 1.79;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      min-width: 135px;
+      min-height: 156px;
+    }
+    
+    .car-body {
+      position: relative;
+      display: flex;
+      min-width: 135px;
+      margin-top: 20px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+    }
+    
+    .car-info {
+      border-radius: 0;
+      z-index: 0;
+      display: flex;
+      width: 104px;
+      max-width: 100%;
+      padding-right: 12px;
+      flex-direction: column;
+      align-items: start;
+    }
+    
+    .car-brand {
+      color: #444e56;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-top: 13px;
+    }
+    
+    .car-price {
+      border-radius: 5px;
+      position: absolute;
+      z-index: 0;
+      display: flex;
+      width: 104px;
+      max-width: 100%;
+      flex-direction: column;
+      font-weight: 700;
+      line-height: 1.2;
+      right: 8px;
+      bottom: 0;
+      height: 56px;
+      padding: 1px 6px 1px 0;
+    }
+    
+    .car-features {
+      display: flex;
+      margin-top: 20px;
+      width: 248px;
+      max-width: 100%;
+      padding-right: 44px;
+      gap: 19px;
+      font-size: 15px;
+      color: rgba(68, 78, 86, 0.7);
+      font-weight: 400;
+      white-space: nowrap;
+      letter-spacing: -0.45px;
+      line-height: 1.2;
+    }
+    
+    @media (max-width: 991px) {
+      .car-features {
+        padding-right: 20px;
+        white-space: initial;
+      }
+    }
+    
+    .feature-item {
+      display: flex;
+      gap: 6px;
+    }
+    
+    @media (max-width: 991px) {
+      .feature-item {
+        white-space: initial;
+      }
+    }
+    
+    .feature-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 20px;
+    }
+    
+    .feature-text {
+      margin: auto 0;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <section class="buyer-car-bidding">
+      <header class="header">
+        <h1 class="page-title">BUY CARS</h1>
+        <div class="user-info">
+          <div class="user-details">
+            <span class="user-name">Buyer Name</span>
+            <span class="user-role">Buyer</span>
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67b00bc03fae3afdaab71b2c7a0541c18e0658fa07cf44f2800202b8ce797969?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="User avatar" class="user-avatar" />
+        </div>
+      </header>
+      
+      <div class="main-content">
+        <div class="content-wrapper">
+          <aside class="sidebar">
+            <nav class="sidebar-content">
+              <div class="logo-wrapper">
+                <div class="logo-icon">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9003887ded9866b993f94ce76972004c9969f531b119d3bb89aacdd0416ebe78?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Logo" class="logo-image" />
+                </div>
+                <span class="logo-text">OPPA</span>
+              </div>
+              <a href="#" class="nav-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbfee62ae944cb77023fe141cd4fdba819d856f8d527eb8cb93f8e94c5506356?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Home icon" class="nav-icon" />
+                <span class="nav-text">Home</span>
+              </a>
+              <a href="#" class="nav-item nav-item-active">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ea25f9e9227568fe1793ebdb9862beda6c45a5f4c705bee4474d62423dce0cc?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Buy Cars icon" class="nav-icon" />
+                <span class="nav-text">Buy Cars</span>
+              </a>
+              <a href="#" class="nav-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bb61d0bcc688d43e8f403fb049c145a7a115c834031f94579eec77664db54b2?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Current Bidding icon" class="nav-icon" />
+                <span class="nav-text">Current Bidding</span>
+              </a>
+              <a href="#" class="nav-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c0e30eba4ef04acd66c68c7c6869287b15abf78c8c2228394354bb8285bb0ad4?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Ask Recommendation icon" class="nav-icon" />
+                <span class="nav-text">Ask Recommendation</span>
+              </a>
+              <a href="#" class="nav-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/10e7284db232ec78a80f8079875cb1673398da929f6f535d7f96c3b88f2601c3?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Purchase History icon" class="nav-icon" />
+                <span class="nav-text">Purchase History</span>
+              </a>
+              <a href="#" class="nav-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4091c9d9338b0ce8f2bfe5b3a3090a34efb4c296723f2b97a3aa45ccf5c85525?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="About Us icon" class="nav-icon" />
+                <span class="nav-text">About Us</span>
+              </a>
+              <a href="#" class="nav-item nav-item-logout">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4bbd80cf97a8fa78a2eba4cf821b682b582bf0ca37bb5590dd275e7bd92313a?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Log out icon" class="nav-icon" />
+                <span class="nav-text">Log out</span>
+              </a>
+            </nav>
+          </aside>
+          
+          <main class="main-section">
+            <section class="bidding-section">
+              <h2 class="section-title">Ongoing Bidding</h2>
+              <div class="bidding-cards">
+                <div class="card-row">
+                  <div class="card-column">
+                    <article class="card">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c42e91651e9ded052c37ad0801627033b04578dc0cba8a4e763905360b418a7b?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Car" class="card-image" />
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h3 class="car-name">Car Name</h3>
+                          <p class="car-brand">Brand</p>
+                        </div>
+                        <div class="card-price">
+                          <p class="price-amount">₱ 500 000.00</p>
+                          <span class="price-label">Start Bid</span>
+                        </div>
+                      </div>
+                      <div class="card-details">
+                        <div class="detail-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5162cba73ae3c3469a29a924e95d4c21c95426d7178c420dcf0a0f9b2b8564d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Seats" class="detail-icon" />
+                          <span class="detail-text">5</span>
+                        </div>
+                        <div class="detail-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/910b4259427fe9b1bb31f2a024714615cb9623aea2ec0dd4ffb2c6f429e41167?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Year" class="detail-icon" />
+                          <span class="detail-text">2023</span>
+                        </div>
+                        <div class="detail-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45919eed65ef7b07ec5311e5d22f8dfc2aae0e10aa2c3b245d3473974cf35f9f?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Transmission" class="detail-icon" />
+                          <span class="detail-text">Manual</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="card-column">
+                    <article class="card">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c42e91651e9ded052c37ad0801627033b04578dc0cba8a4e763905360b418a7b?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Car" class="card-image" />
+                      <div class="card-body">
+                        <div class="card-title">
+                          <h3 class="car-name">Car Name</h3>
+                          <p class="car-brand">Brand</p>
+                        </div>
+                        <div class="card-price">
+                          <p class="price-amount">₱ 500 000.00</p>
+                          <span class="price-label">Start Bid</span>
+                        </div>
+                      </div>
+                      <div class="card-details">
+                        <div class="detail-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5162cba73ae3c3469a29a924e95d4c21c95426d7178c420dcf0a0f9b2b8564d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Seats" class="detail-icon" />
+                          <span class="detail-text">5</span>
+                        </div>
+                        <div class="detail-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/910b4259427fe9b1bb31f2a024714615cb9623aea2ec0dd4ffb2c6f429e41167?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Year" class="detail-icon" />
+                          <span class="detail-text">2023</span>
+                        </div>
+                        <div class="detail-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45919eed65ef7b07ec5311e5d22f8dfc2aae0e10aa2c3b245d3473974cf35f9f?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Transmission" class="detail-icon" />
+                          <span class="detail-text">Manual</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <div class="progress-bar">
+              <div class="progress-indicator"></div>
+            </div>
+            
+            <section class="available-cars-section">
+              <h2 class="section-title">Available Used Cars</h2>
+              <div class="filter-section">
+                <div class="filter-group">
+                  <div class="filter-item">
+                    <span class="filter-text">Car Brand</span>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/51fe80058406a8f2bc87e0c7283c899b9280dfa87e7bf2c2a1be9edc7ce6c3d5?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Dropdown" class="filter-icon" />
+                  </div>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f407b6e-6be0-47b5-a8b4-42eea7445cf1?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Separator" class="filter-separator" />
+                  <div class="filter-item">
+                    <span class="filter-text">Capacity</span>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/51fe80058406a8f2bc87e0c7283c899b9280dfa87e7bf2c2a1be9edc7ce6c3d5?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Dropdown" class="filter-icon" />
+                  </div>
+                </div>
+                <div class="filter-clear">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/95c9cfeb7367fdea9169891da6b8e4549d089bb38c8ba82ca51a7883dbe03e92?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Clear icon" class="clear-icon" />
+                  <span class="clear-text">Clear</span>
+                </div>
+              </div>
+              <div class="search-bar">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d8e34443f6ec2d7ab337f2d8ddfa89456d0c773a4de0b94a51390f53e28742b?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Search icon" class="search-icon" />
+                <span class="search-text">Search</span>
+              </div>
+              <div class="car-grid">
+                <div class="car-row">
+                  <div class="car-column">
+                    <article class="car-card">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b58652d0f7776329afe700ed7331041e9b0a2dfbcec910cb38124ac7cb6eeae3?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Car" class="car-image" />
+                      <div class="car-body">
+                        <div class="car-info">
+                          <h3 class="car-name">Car Name</h3>
+                          <p class="car-brand">Brand</p>
+                        </div>
+                        <div class="car-price">
+                          <p class="price-amount">₱ 500 000.00</p>
+                          <span class="price-label">Start Bid</span>
+                        </div>
+                      </div>
+                      <div class="car-features">
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e2b9bc6a6346640b90c0c152575b78d0ecdfb8e6a85a9af05f7534adee5a6d3?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Seats" class="feature-icon" />
+                          <span class="feature-text">5</span>
+                        </div>
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/81d8984dc3481d54ed11a3d41dd29a6b0ca8a3856db636cd948e66821e8ad995?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Year" class="feature-icon" />
+                          <span class="feature-text">2023</span>
+                        </div>
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/040b004695740896bead6a7f390bf497ff0a7c417dd928fcd6d09c23333c25e7?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Transmission" class="feature-icon" />
+                          <span class="feature-text">Manual</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="car-column">
+                    <article class="car-card">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9db7776a0ac3b2fe35f84ae20b9e60c4c35a758ec56c0e2f0d58117ce9b65bfc?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Car" class="car-image" />
+                      <div class="car-body">
+                        <div class="car-info">
+                          <h3 class="car-name">Car Name</h3>
+                          <p class="car-brand">Brand</p>
+                        </div>
+                        <div class="car-price">
+                          <p class="price-amount">₱ 500 000.00</p>
+                          <span class="price-label">Start Bid</span>
+                        </div>
+                      </div>
+                      <div class="car-features">
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5162cba73ae3c3469a29a924e95d4c21c95426d7178c420dcf0a0f9b2b8564d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Seats" class="feature-icon" />
+                          <span class="feature-text">5</span>
+                        </div>
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/910b4259427fe9b1bb31f2a024714615cb9623aea2ec0dd4ffb2c6f429e41167?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Year" class="feature-icon" />
+                          <span class="feature-text">2023</span>
+                        </div>
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45919eed65ef7b07ec5311e5d22f8dfc2aae0e10aa2c3b245d3473974cf35f9f?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Transmission" class="feature-icon" />
+                          <span class="feature-text">Manual</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="car-column">
+                    <article class="car-card">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9db7776a0ac3b2fe35f84ae20b9e60c4c35a758ec56c0e2f0d58117ce9b65bfc?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Car" class="car-image" />
+                      <div class="car-body">
+                        <div class="car-info">
+                          <h3 class="car-name">Car Name</h3>
+                          <p class="car-brand">Brand</p>
+                        </div>
+                        <div class="car-price">
+                          <p class="price-amount">₱ 500 000.00</p>
+                          <span class="price-label">Start Bid</span>
+                        </div>
+                      </div>
+                      <div class="car-features">
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5162cba73ae3c3469a29a924e95d4c21c95426d7178c420dcf0a0f9b2b8564d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Seats" class="feature-icon" />
+                          <span class="feature-text">5</span>
+                        </div>
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/910b4259427fe9b1bb31f2a024714615cb9623aea2ec0dd4ffb2c6f429e41167?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Year" class="feature-icon" />
+                          <span class="feature-text">2023</span>
+                        </div>
+                        <div class="feature-item">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45919eed65ef7b07ec5311e5d22f8dfc2aae0e10aa2c3b245d3473974cf35f9f?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Transmission" class="feature-icon" />
+                          <span class="feature-text">Manual</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
