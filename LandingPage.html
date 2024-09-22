@@ -1,50 +1,241 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8" />
-        <!-- Link to external stylesheet -->
-        <link rel="stylesheet" type="text/css" href="LandingPageStyle.css" />
-       
-         <title>Template</title>
-    </head>
-<body>
-<section class="landing-page">
+<style>
+  .landing-page {
+    background-color: #e5e9fb;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 32px 0 65px 41px;
+  }
+  
+  .header-container {
+    display: flex;
+    width: 100%;
+    max-width: 1333px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: start;
+  }
+  
+  .logo-image {
+    display: flex;
+    min-height: 55px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-icon {
+    aspect-ratio: 0.71;
+    object-fit: contain;
+    object-position: center;
+    width: 29px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .logo-text {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    line-height: 1.2;
+  }
+  
+  .company-name {
+    color: #444e56;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1.44px;
+    align-self: start;
+  }
+  
+  .company-tagline {
+    color: rgba(68, 78, 86, 0.8);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.45px;
+    margin-top: 12px;
+  }
+  
+  .nav-link {
+    display: flex;
+    gap: 5px;
+    color: #444e56;
+    letter-spacing: -0.6px;
+    margin: auto 0;
+    font: 600 20px/1.2 Inter, sans-serif;
+    text-decoration: none;
+  }
+  
+  .nav-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 33px;
+  }
+  
+  .main-content {
+    margin-top: 5px;
+    width: auto;
+    align-self: stretch;
+  }
+  
+  .content-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .text-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 33%;
+    margin-left: 0;
+  }
+  
+  .text-content {
+    display: flex;
+    margin-top: 113px;
+    flex-direction: column;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+  }
+  
+  .main-heading {
+    color: #0a4ac2;
+    font-size: 80px;
+    line-height: 96px;
+    align-self: start;
+  }
+  
+  .sub-heading {
+    color: rgba(68, 78, 86, 0.8);
+    font-size: 29px;
+    line-height: 40px;
+    margin-top: 42px;
+  }
+  
+  .cta-button {
+    border-radius: 15px;
+    background-color: #3e6ee3;
+    margin-top: 54px;
+    color: #f2f3f7;
+    text-align: center;
+    letter-spacing: 0.96px;
+    padding: 20px 70px;
+    font: 32px/1.2 Inter, sans-serif;
+  }
+  
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 67%;
+    margin-left: 20px;
+  }
+  
+  .hero-image {
+    aspect-ratio: 0.98;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 991px) {
+    .landing-page {
+      padding-left: 20px;
+    }
+  
+    .header-container {
+      max-width: 100%;
+    }
+  
+    .company-name {
+      font-size: 40px;
+    }
+  
+    .main-content {
+      max-width: 100%;
+    }
+  
+    .content-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .text-column {
+      width: 100%;
+    }
+  
+    .text-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .main-heading {
+      font-size: 40px;
+      line-height: 53px;
+    }
+  
+    .sub-heading {
+      max-width: 100%;
+      margin: 40px 10px 0 0;
+    }
+  
+    .cta-button {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  
+    .image-column {
+      width: 100%;
+    }
+  
+    .hero-image {
+      max-width: 100%;
+      margin-top: 16px;
+    }
+  }
+  </style>
+  
+  <section class="landing-page">
     <header class="header-container">
       <div class="logo-container">
-        <div class="logo-wrapper">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f8ef2cd7f1e2003b35518305fd25ab811dc1fff8974deb26f205a4d052f740d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" class="logo" alt="OPPA logo" />
+        <div class="logo-image">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f8ef2cd7f1e2003b35518305fd25ab811dc1fff8974deb26f205a4d052f740d?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="OPPA Logo" class="logo-icon" />
         </div>
-        <div class="brand-info">
-          <h1 class="brand-name">OPPA</h1>
-          <p class="brand-tagline">Developed by Pre Owned Pros</p>
+        <div class="logo-text">
+          <h1 class="company-name">OPPA</h1>
+          <p class="company-tagline">Developed by Pre Owned Pros</p>
         </div>
       </div>
       <nav>
         <a href="#about" class="nav-link">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/633289eceda4e88ed9eb7893373889d6b4106aca9f8787f52f3f3e8a07c803da?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" class="nav-icon" alt="" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/633289eceda4e88ed9eb7893373889d6b4106aca9f8787f52f3f3e8a07c803da?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="nav-icon" />
           <span>About us</span>
         </a>
       </nav>
     </header>
     
-    <!-- Main content area -->
     <main class="main-content">
       <div class="content-wrapper">
         <div class="text-column">
           <div class="text-content">
-            <h2 class="main-heading">Valuate.<br />Match. Drive</h2>
-            <div class="cta-container">
-              <p class="cta-description">Find Your Car's Value & Discover the<br />Perfect Match for Your Lifestyle!</p>
-              <a href="LogIn.html#logIn" ><button class="cta-button" >GET STARTED</button> </a>
-            </div>
+            <h2 class="main-heading">Valuate.<br />Match. <br />Drive</h2>
+            <p class="sub-heading">Find Your Car's Value & Discover the<br />Perfect Match for Your Lifestyle!</p>
+            <a href="LogIn.html#logIn"><button class="cta-button">GET STARTED</button></a>
           </div>
         </div>
         <div class="image-column">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6f5ed5e945b9dcacf4099017ce579957968f82597429fb666691d28fb8e46481?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" class="hero-image" alt="Illustration of a car" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9fe65922808cfa3f64ed994b3c482f15a61442dcb2202f4df199eef02ac036f5?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="Car valuation and matching illustration" class="hero-image" />
         </div>
       </div>
     </main>
-
   </section>
-</body>
-</html>
