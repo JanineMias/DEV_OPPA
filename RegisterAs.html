@@ -94,10 +94,10 @@
     
     .login-btn {
       border-radius: 20px; 
-      background-color: rgba(187, 188, 192, 0.4); 
+      background-color: transparent; 
       font-weight: 600; 
       padding: 8px 25px; 
-      border: 1px solid rgba(187, 188, 192, 0.4);
+      border: 1px solid transparent;
     }
     
     .register-btn {
@@ -151,6 +151,7 @@
       line-height: 1.2;
       padding: 42px 43px;
       flex: 1;
+      
     }
     
     .role-header {
@@ -160,6 +161,7 @@
       color: #444e56;
       font-weight: 800;
       letter-spacing: 1.08px;
+      
     }
     
     .role-icon {
@@ -174,6 +176,7 @@
       font-weight: 600;
       letter-spacing: -0.6px;
       margin-top: 17px;
+      
     }
     
     .next-btn {
@@ -289,21 +292,21 @@
         <p class="register-subtitle">Choose your role depending on your needs.</p>
     
         <div class="role-selection">
-         <a href="AsBuyer#buyerReg"> <div class="role-card" tabindex="0" role="button">
+           <div class="role-card" tabindex="0" role="button">
             <div class="role-header">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd23ce010bdc8d2e2562d1ddaedbd15b50b25f5884025791c2d4b4cc0988efc5?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="role-icon" />
               <span>Buyer</span>
             </div>
             <p class="role-description">I want to buy used cars.</p>
-          </div> </a>
+          </div> 
     
           <div class="role-card" tabindex="0" role="button">
-            <a href="AsSeller#sellerReg"><div class="role-header">
+             <div class="role-header">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c7f053708b9199628a4407d0b28fb5463e77a64a570ad497c2eb449dacbf61a?placeholderIfAbsent=true&apiKey=97f4a62e1e4240b4be3dcce4c6ae6e4d" alt="" class="role-icon" />
               <span>Seller</span> 
             </div>
             <p class="role-description">I want to sell my used cars.</p>
-          </div></a>
+          </div>
         </div>
     
         <button class="next-btn">Next</button>
